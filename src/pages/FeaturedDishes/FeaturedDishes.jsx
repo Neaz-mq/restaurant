@@ -42,7 +42,7 @@ const FeaturedDishes = () => {
   const [hovered, setHovered] = useState(null);
 
   return (
-    <section className="py-20 bg-black text-white">
+    <section className="py-24 bg-black text-white">
       <div className="container mx-auto text-center">
         <motion.h2
           className="text-4xl font-bold mb-12 tracking-wide"
