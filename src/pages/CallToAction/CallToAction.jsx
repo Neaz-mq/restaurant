@@ -12,14 +12,14 @@ const CallToAction = () => {
       >
         {/* Lottie animation directly from the URL */}
         <div className="-mt-10 mb-2">
-  <iframe
-    src="https://lottie.host/embed/d879a2c5-2d21-45e9-981c-b3350e582372/XP4CWcfP7T.lottie"
-    frameBorder="0"
-    style={{ width: '250px', height: '250px' }}
-    allow="autoplay"
-    title="Lottie Animation"
-  ></iframe>
-</div>
+          <iframe
+            src="https://lottie.host/embed/d879a2c5-2d21-45e9-981c-b3350e582372/XP4CWcfP7T.lottie"
+            frameBorder="0"
+            style={{ width: '250px', height: '250px' }}
+            allow="autoplay"
+            title="Lottie Animation"
+          ></iframe>
+        </div>
 
 
         {/* Content (Text and Button) */}

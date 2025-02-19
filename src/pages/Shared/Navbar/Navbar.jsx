@@ -36,7 +36,14 @@ const Navbar = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Link to="/" className="text-2xl font-bold tracking-wide text-neutral-50">
+          <Link
+            to="/"
+            onClick={(e) => {
+              e.preventDefault(); // Prevent React Router from handling navigation
+              window.location.href = "/"; // Force full reload
+            }}
+            className="text-2xl font-bold tracking-wide text-neutral-50"
+          >
             🍽️ TrendyBites
           </Link>
         </motion.div>
@@ -62,7 +69,16 @@ const Navbar = () => {
               whileHover={{ scale: 1.1 }}
               transition={{ type: "spring", stiffness: 300 }}
             >
-              <Link to={`/${item.toLowerCase()}`} className="hover:text-yellow-400 transition">
+              <Link
+                to={`/${item.toLowerCase()}`}
+                className="hover:text-yellow-400 transition"
+                onClick={(e) => {
+                  if (item === "Home") {
+                    e.preventDefault();
+                    window.location.href = "/";
+                  }
+                }}
+              >
                 {item}
               </Link>
             </motion.li>
@@ -105,7 +121,14 @@ const Navbar = () => {
                 key={index}
                 to={`/${item.toLowerCase()}`}
                 className="hover:text-yellow-400 transition text-neutral-50"
-                onClick={() => setIsOpen(false)} // Close menu on click, no page redirect
+                onClick={(e) => {
+                  if (item === "Home") {
+                    e.preventDefault();
+                    window.location.href = "/";
+                  } else {
+                    setIsOpen(false); // Close menu on click, no page redirect for other items
+                  }
+                }}
               >
                 {item}
               </Link>
