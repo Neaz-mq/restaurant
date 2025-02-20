@@ -23,7 +23,7 @@ const TodaysOffer = () => {
   ];
 
   return (
-    <section className="relative py-20 px-4 bg-gradient-to-br from-gray-950 to-black text-white">
+    <section className="relative py-20 px-4  text-white">
       <motion.h2 
         className="text-5xl font-extrabold mb-16 text-center tracking-wide"
         initial={{ opacity: 0, y: 50 }}

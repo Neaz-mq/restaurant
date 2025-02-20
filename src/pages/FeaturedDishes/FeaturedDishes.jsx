@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const dishes = [
   {
@@ -39,8 +38,6 @@ const cardVariants = {
 };
 
 const FeaturedDishes = () => {
-  const [hovered, setHovered] = useState(null);
-
   return (
     <section className="py-24 bg-black text-white">
       <div className="container mx-auto text-center">
@@ -53,7 +50,6 @@ const FeaturedDishes = () => {
           Our Featured Dishes 🍽️
         </motion.h2>
 
-        {/* Dishes Grid */}
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 px-6"
           initial="hidden"
@@ -72,34 +68,21 @@ const FeaturedDishes = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              onMouseEnter={() => setHovered(dish.id)}
-              onMouseLeave={() => setHovered(null)}
-              className={`relative bg-gray-800 rounded-2xl overflow-hidden shadow-lg transition-all duration-300 
-                ${hovered === dish.id ? "scale-105 shadow-yellow-500/50" : "hover:scale-105 hover:shadow-xl"}`}
+              whileHover={{ scale: 1.05, boxShadow: "0px 15px 25px rgba(0, 0, 0, 0.6)" }}
+              whileTap={{ scale: 0.95 }}
+              className="relative bg-gray-800 rounded-2xl overflow-hidden shadow-lg shadow-black/50 transition-all duration-300"
             >
-              <motion.img
+              <img
                 src={dish.image}
                 alt={dish.name}
                 className="w-full h-48 object-cover"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
               />
-              <div className="p-6 text-center">
+              <div className="p-6 text-center relative z-10">
                 <h3 className="text-xl font-semibold">{dish.name}</h3>
                 <p className="text-yellow-400 text-lg font-bold mt-2">
                   {dish.price}
                 </p>
               </div>
-              {/* Floating Glow Effect */}
-              {hovered === dish.id && (
-                <motion.div
-                  className="absolute inset-0 bg-yellow-500/10 rounded-2xl blur-lg"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-              )}
             </motion.div>
           ))}
         </motion.div>

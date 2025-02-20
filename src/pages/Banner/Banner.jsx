@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Banner = () => {
   return (
@@ -46,14 +47,14 @@ const Banner = () => {
         </motion.p>
 
         {/* CTA Button with Animation */}
-        <motion.button 
+       <Link to={"/menu"}> <motion.button 
           className="mt-6 px-6 py-3 bg-yellow-400 text-black font-semibold text-lg rounded-xl hover:bg-yellow-500 transition"
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
           variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
         >
           Explore Menu
-        </motion.button>
+        </motion.button></Link>
       </motion.div>
     </div>
   );
