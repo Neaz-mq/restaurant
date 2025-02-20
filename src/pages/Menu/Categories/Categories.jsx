@@ -1,15 +1,15 @@
 import { motion } from 'framer-motion';
 
 const categories = [
-    { name: 'Appetizers & Starters', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740043911/appetizers_z9s3ij.jpg', emoji: '🍤' },
-    { name: 'Salads & Soups', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740043835/salads_soups_c1rbhk.jpg', emoji: '🥗' },
-    { name: 'Main Courses', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740043835/main_courses_f5jdsz.jpg', emoji: '🍛' },
-    { name: 'Pizzas, Burgers & Sandwiches', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740043511/pizza_bmtdvq.jpg', emoji: '🍔' },
-    { name: 'Pasta & Rice Dishes', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740043835/pasta_rice_hjfbsl.jpg', emoji: '🍝' },
-    { name: 'Grilled & Specialties', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740043835/grilled_specialties_lrt3mx.jpg', emoji: '🥩' },
-    { name: 'Desserts', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740043835/desserts_obogzj.jpg', emoji: '🍰' },
-    { name: 'Beverages', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740043835/beverages_ugkcsi.jpg', emoji: '🍹' },
-    { name: 'Kids’ Menu', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740043835/kids_menu_exybrn.jpg', emoji: '👶' },
+    { name: 'Appetizers & Starters', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740051406/appatizwer_y0entv.jpg', emoji: '🍤' },
+    { name: 'Salads & Soups', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740051553/salad_udouwv.jpg', emoji: '🥗' },
+    { name: 'Main Courses', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740051773/main_iamfty.jpg', emoji: '🍛' },
+    { name: 'Pizzas, Burgers & Sandwiches', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740051917/pizzaburger_z2dmxk.jpg', emoji: '🍔' },
+    { name: 'Pasta & Rice Dishes', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740052093/pastarice_qgfqwe.jpg', emoji: '🍝' },
+    { name: 'Grilled & Specialties', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740052214/grilled_qqbera.jpg', emoji: '🥩' },
+    { name: 'Desserts', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740052316/dessert_irccge.jpg', emoji: '🍰' },
+    { name: 'Beverages', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740052398/beverage_dgwn6m.jpg', emoji: '🍹' },
+    { name: 'Kids’ Menu', image: 'https://res.cloudinary.com/dzi3u164c/image/upload/v1740052547/kids_xswfnl.jpg', emoji: '👶' },
 ];
 
 const Categories = () => {
