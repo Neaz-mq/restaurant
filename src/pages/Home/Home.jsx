@@ -12,9 +12,8 @@ const Home = () => {
            <FeaturedDishes></FeaturedDishes>
            <AboutUs></AboutUs>
            <CallToAction></CallToAction>
-           <Testimonials></Testimonials>
            <TodaysOffer></TodaysOffer>
-           
+           <Testimonials></Testimonials>                
         </div>
     );
 };
