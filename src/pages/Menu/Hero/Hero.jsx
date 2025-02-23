@@ -2,7 +2,7 @@ import { motion } from 'framer-motion';
 
 const Hero = () => {
     return (
-        <section className="relative h-[80vh] flex items-center justify-center bg-cover bg-center bg-[url('https://res.cloudinary.com/dzi3u164c/image/upload/v1740046360/menu_h0igv4.jpg')]">
+        <section className="relative  h-[80vh] flex items-center justify-center bg-cover bg-center bg-[url('https://res.cloudinary.com/dzi3u164c/image/upload/v1740046360/menu_h0igv4.jpg')]">
             <div className="absolute inset-0 bg-black/70 z-10" />
 
             <motion.div 

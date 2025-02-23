@@ -14,7 +14,7 @@ const categories = [
 
 const Categories = () => {
     return (
-        <section className="py-16 px-4 bg-black text-white">
+        <section className="py-24 px-4 bg-black text-white">
             <h2 className="text-4xl font-extrabold text-center mb-10">🍽️ Explore Our Menu Categories 🍹</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-7xl mx-auto">
                 {categories.map((category, index) => (
