@@ -1,7 +1,9 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+
+const NAV_ITEMS = ["Home", "Menu", "About", "Gallery", "Reservations", "Contact"];
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -9,16 +11,18 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 50);
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsOpen((prevState) => !prevState);
-  };
+  const toggleMenu = useCallback(() => {
+    setIsOpen((prev) => !prev);
+  }, []);
 
   return (
     <motion.nav
@@ -38,10 +42,6 @@ const Navbar = () => {
         >
           <Link
             to="/"
-            onClick={(e) => {
-              e.preventDefault(); // Prevent React Router from handling navigation
-              window.location.href = "/"; // Force full reload
-            }}
             className="text-2xl font-bold tracking-wide text-neutral-50"
           >
             🍽️ TrendyBites
@@ -62,7 +62,7 @@ const Navbar = () => {
             },
           }}
         >
-          {["Home", "Menu", "About", "Gallery", "Reservations", "Contact"].map((item, index) => (
+          {NAV_ITEMS.map((item, index) => (
             <motion.li
               key={index}
               variants={{ hidden: { opacity: 0, y: -10 }, visible: { opacity: 1, y: 0 } }}
@@ -70,14 +70,9 @@ const Navbar = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <Link
-                to={`/${item.toLowerCase()}`}
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 className="hover:text-yellow-400 transition"
-                onClick={(e) => {
-                  if (item === "Home") {
-                    e.preventDefault();
-                    window.location.href = "/";
-                  }
-                }}
+                onClick={() => setIsOpen(false)}
               >
                 {item}
               </Link>
@@ -106,7 +101,7 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile/Tablet Menu */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -116,19 +111,12 @@ const Navbar = () => {
             transition={{ type: "spring", stiffness: 200 }}
             className="absolute top-16 left-0 w-full bg-black bg-opacity-90 flex flex-col items-center space-y-6 py-6 text-lg md:w-[100%] lg:hidden"
           >
-            {["Home", "Menu", "About", "Gallery", "Reservations", "Contact"].map((item, index) => (
+            {NAV_ITEMS.map((item, index) => (
               <Link
                 key={index}
-                to={`/${item.toLowerCase()}`}
+                to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                 className="hover:text-yellow-400 transition text-neutral-50"
-                onClick={(e) => {
-                  if (item === "Home") {
-                    e.preventDefault();
-                    window.location.href = "/";
-                  } else {
-                    setIsOpen(false); // Close menu on click, no page redirect for other items
-                  }
-                }}
+                onClick={() => setIsOpen(false)}
               >
                 {item}
               </Link>
@@ -136,7 +124,7 @@ const Navbar = () => {
             <Link
               to="/reservations"
               className="px-5 py-2 bg-yellow-400 text-black font-semibold rounded-xl hover:bg-yellow-500 transition"
-              onClick={() => setIsOpen(false)} // Close menu on click, no page redirect
+              onClick={() => setIsOpen(false)}
             >
               Book a Table
             </Link>

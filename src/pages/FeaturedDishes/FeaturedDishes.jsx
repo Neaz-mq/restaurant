@@ -33,7 +33,7 @@ const cardVariants = {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { delay: index * 0.2, type: "spring", stiffness: 100 },
+    transition: { delay: index * 0.15, type: "spring", stiffness: 100 },
   }),
 };
 
@@ -44,8 +44,9 @@ const FeaturedDishes = () => {
         <motion.h2
           className="text-4xl font-bold mb-12 tracking-wide"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
         >
           Our Featured Dishes 🍽️
         </motion.h2>
@@ -57,7 +58,7 @@ const FeaturedDishes = () => {
           viewport={{ once: true }}
           variants={{
             hidden: { opacity: 0, y: 30 },
-            visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.2 } },
+            visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.15 } },
           }}
         >
           {dishes.map((dish, index) => (
@@ -68,14 +69,15 @@ const FeaturedDishes = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true }}
-              whileHover={{ scale: 1.05, boxShadow: "0px 15px 25px rgba(0, 0, 0, 0.6)" }}
+              whileHover={{ scale: 1.05, filter: "brightness(1.1)" }}
               whileTap={{ scale: 0.95 }}
-              className="relative bg-gray-800 rounded-2xl overflow-hidden shadow-lg shadow-black/50 transition-all duration-300"
+              className="relative bg-gray-800 rounded-2xl overflow-hidden drop-shadow-lg transition-all duration-300"
             >
               <img
                 src={dish.image}
                 alt={dish.name}
                 className="w-full h-48 object-cover"
+                loading="lazy"
               />
               <div className="p-6 text-center relative z-10">
                 <h3 className="text-xl font-semibold">{dish.name}</h3>

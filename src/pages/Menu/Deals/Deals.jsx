@@ -33,7 +33,7 @@ const dealsData = [
 
 const Deals = () => {
   return (
-    <div className="relative p-8 overflow-hidden">
+    <div className="relative py-24 overflow-hidden">
       {/* Neon Blobs for Background Animation */}
       <div className="absolute -top-20 -left-40 w-96 h-96 bg-yellow-500 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
       <div className="absolute -bottom-20 -right-40 w-96 h-96 bg-orange-500 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
