@@ -5,8 +5,8 @@ const VisitUs = () => {
     return (
         <section className="relative py-20 px-4 text-white overflow-hidden">
             {/* Background Glow */}
-            <div className="absolute bottom-0 -left-24 w-72 h-60  bg-yellow-400 rounded-full filter blur-2xl opacity-40 animate-pulse"></div>
-            <div className="absolute top-0 -right-24 w-72 h-60 bg-red-400 rounded-full filter blur-2xl opacity-40 animate-pulse"></div>
+            <div className="absolute -top-20 -left-40 w-96 h-96 bg-yellow-500 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
+            <div className="absolute -bottom-20 -right-40 w-96 h-96 bg-red-500 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
             
             <div className="text-center max-w-4xl mx-auto relative z-10">
                 <motion.h2
