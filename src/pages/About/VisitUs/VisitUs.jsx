@@ -27,7 +27,7 @@ const VisitUs = () => {
                     <div className="flex flex-col items-center space-y-4">
                         <div className="flex items-center space-x-4">
                             <FaMapMarkerAlt className="text-yellow-300 text-3xl" />
-                            <p className="text-lg text-center">Jaleshorritola, Bogura, Bogura Sadar, 5800</p>
+                            <p className="text-lg text-center">Jaleshoritola, Bogura, Bogura Sadar, 5800</p>
                         </div>
                         <div className="flex items-center space-x-4">
                             <FaClock className="text-green-300 text-3xl" />
