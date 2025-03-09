@@ -4,7 +4,8 @@ import Home from "../pages/Home/Home";
 import Menus from "../pages/Menu/Menus/Menus";
 import Abouts from "../pages/About/Abouts/Abouts";
 import Galleries from "../pages/Gallery/Galleries/Galleries";
-import Contact from "../pages/Contact/Contact";
+import Contacts from "../pages/Contact/Contacts/Contacts";
+
 
 
 
@@ -31,7 +32,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/contact",
-        element: <Contact></Contact>
+        element: <Contacts></Contacts>
       },
     ],
   },
