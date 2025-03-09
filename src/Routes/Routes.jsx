@@ -3,6 +3,7 @@ import Main from "../Layout/Main";
 import Home from "../pages/Home/Home";
 import Menus from "../pages/Menu/Menus/Menus";
 import Abouts from "../pages/About/Abouts/Abouts";
+import Galleries from "../pages/Gallery/Galleries/Galleries";
 
 
 export const router = createBrowserRouter([
@@ -21,6 +22,10 @@ export const router = createBrowserRouter([
       {
         path: "/about",
         element: <Abouts></Abouts>
+      },
+      {
+        path: "/gallery",
+        element: <Galleries></Galleries>
       },
     ],
   },

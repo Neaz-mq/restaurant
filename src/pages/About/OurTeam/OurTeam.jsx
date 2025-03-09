@@ -8,7 +8,7 @@ const teamMembers = [
 
 const OurTeam = () => {
     return (
-        <div className="py-12 bg-black text-center">
+        <div className="py-24 bg-black text-center">
             <h1 className="text-4xl font-bold text-white mb-8">Meet Our Team</h1>
             <div className="flex flex-wrap justify-center gap-8">
                 {teamMembers.map((member, index) => (

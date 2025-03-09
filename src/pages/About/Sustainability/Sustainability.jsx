@@ -9,7 +9,7 @@ const sustainabilitySteps = [
 
 const Sustainability = () => {
     return (
-        <section className="relative bg-black py-20 px-4 overflow-hidden">
+        <section className="relative bg-black py-24 px-4 overflow-hidden">
             {/* Neon Blobs */}
             <div className="absolute -top-20 -left-40 w-96 h-96 bg-green-500 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
             <div className="absolute -bottom-20 -right-40 w-96 h-96 bg-blue-500 rounded-full filter blur-3xl opacity-30 animate-pulse"></div>
