@@ -5,6 +5,7 @@ import Menus from "../pages/Menu/Menus/Menus";
 import Abouts from "../pages/About/Abouts/Abouts";
 import Galleries from "../pages/Gallery/Galleries/Galleries";
 import Contacts from "../pages/Contact/Contacts/Contacts";
+import Reservations from "../pages/Reservation/Reservations/Reservations";
 
 
 
@@ -33,6 +34,10 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contacts></Contacts>
+      },
+      {
+        path: "/reservation",
+        element: <Reservations></Reservations>
       },
     ],
   },

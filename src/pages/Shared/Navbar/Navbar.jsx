@@ -88,7 +88,7 @@ const Navbar = () => {
           className="hidden lg:block"
         >
           <Link
-            to="/reservations"
+            to="/reservation"
             className="px-5 py-2 bg-yellow-400 text-black font-semibold rounded-xl hover:bg-yellow-500 transition"
           >
             Book a Table
