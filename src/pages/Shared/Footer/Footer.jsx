@@ -38,7 +38,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-2 text-gray-300">
-                            {["Home", "Menu", "About", "Gallery", "Reservations", "Contact"].map((item, index) => (
+                            {["Home", "Menu", "About", "Gallery", "Reservation", "Contact"].map((item, index) => (
                                 <motion.li
                                     key={index}
                                     whileHover={{ x: 10, color: "#facc15" }} // Smooth hover effect
