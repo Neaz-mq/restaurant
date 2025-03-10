@@ -8,8 +8,6 @@ import Contacts from "../pages/Contact/Contacts/Contacts";
 import Reservations from "../pages/Reservation/Reservations/Reservations";
 
 
-
-
 export const router = createBrowserRouter([
   {
     path: "/",

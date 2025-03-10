@@ -123,7 +123,7 @@ const Navbar = () => {
               </Link>
             ))}
             <Link
-              to="/reservations"
+              to="/reservation"
               className="px-5 py-2 bg-yellow-400 text-black font-semibold rounded-xl hover:bg-yellow-500 transition"
               onClick={() => setIsOpen(false)}
             >
