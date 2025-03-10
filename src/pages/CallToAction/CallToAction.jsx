@@ -38,7 +38,7 @@ const CallToAction = () => {
 
           {/* Call-to-action button */}
           <Link
-            to="/reservations"
+            to="/reservation"
             className="px-10 py-4 bg-yellow-400 text-black font-bold rounded-xl transition ease-in-out duration-300 transform hover:scale-110 hover:bg-yellow-500"
           >
             Reserve Your Spot Now

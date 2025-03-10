@@ -18,20 +18,20 @@ const AvailableSlots = () => {
   const [selectedSlot, setSelectedSlot] = useState(null);
 
   return (
-    <section className="py-24 bg-black text-white text-center">
-      <h2 className="text-4xl font-bold mb-6">Available Time Slots</h2>
-      <p className="text-lg mb-8 opacity-80">
+    <section className="py-16 md:py-24 bg-black text-white text-center">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-6">Available Time Slots</h2>
+      <p className="text-lg sm:text-xl mb-8 opacity-80">
         Choose your preferred time to dine with us. Select an available time slot.
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 mx-auto max-w-5xl">
         {timeSlots.map((slot, index) => (
           <motion.button
             key={index}
             whileTap={{ scale: 0.95 }}
             whileHover={{ scale: 1.05 }}
             transition={{ type: "spring", stiffness: 300 }}
-            className={`px-6 py-3 text-lg font-semibold rounded-md border-2 transition duration-300 cursor-pointer transform ${
+            className={`px-4 py-3 text-sm sm:text-lg font-semibold rounded-md border-2 transition duration-300 cursor-pointer transform ${
               selectedSlot === slot.time
                 ? "bg-yellow-400 text-black shadow-lg"
                 : slot.status === "Reserved"
@@ -51,7 +51,7 @@ const AvailableSlots = () => {
         ))}
       </div>
 
-      <p className="mt-8 text-lg opacity-70">
+      <p className="mt-8 text-lg sm:text-xl opacity-70">
         Please select an available slot to reserve your table.
       </p>
     </section>
